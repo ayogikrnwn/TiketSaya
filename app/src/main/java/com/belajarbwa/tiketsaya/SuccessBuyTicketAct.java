@@ -2,7 +2,9 @@ package com.belajarbwa.tiketsaya;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -37,5 +39,20 @@ public class SuccessBuyTicketAct extends AppCompatActivity {
         app_subtitle.startAnimation(ttb);
         btn_my_dashboard.startAnimation(btt);
         btn_view_ticket.startAnimation(btt);
+
+        btn_my_dashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gohome = new Intent(SuccessBuyTicketAct.this, HomeAct.class);
+                startActivity(gohome);
+            }
+        });
+        btn_view_ticket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent gotoprofile = new Intent(SuccessBuyTicketAct.this, MyProfileAct.class);
+                startActivity(gotoprofile);
+            }
+        });
     }
 }

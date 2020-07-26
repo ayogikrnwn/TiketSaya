@@ -101,7 +101,7 @@ public class SignInAct extends AppCompatActivity {
                                         Toast.makeText(getApplicationContext(), "Password salah!", Toast.LENGTH_SHORT).show();
                                         // ubah state menjadi loading
                                         btn_sign_in.setEnabled(true);
-                                        btn_sign_in.setText("SIGN IN");
+                                        btn_sign_in.setText("SIGN  IN");
                                     }
 
 
